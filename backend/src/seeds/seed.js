@@ -65,8 +65,20 @@ async function seed() {
   for (const u of DEMO_USERS) {
     const [user] = await User.findOrCreate({
       where: { email: u.email },
-      defaults: { name: u.name, email: u.email, passwordHash, isActive: true },
+      defaults: {
+        name: u.name,
+        email: u.email,
+        passwordHash,
+        isActive: true,
+      },
     });
+  
+    // Keep demo credentials in sync on every seed run
+    user.name = u.name;
+    user.passwordHash = passwordHash;
+    user.isActive = true;
+    await user.save();
+  
     await user.setRoles([roleRecords[u.role]]);
   }
 
