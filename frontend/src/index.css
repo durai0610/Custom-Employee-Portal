@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+  /* Belt-and-suspenders: prevents page-level horizontal scroll/jank on
+     small screens if any child briefly overflows (e.g. during a transition),
+     without affecting normal layout or desktop styling. */
+  overflow-x: hidden;
+}
