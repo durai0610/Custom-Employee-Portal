@@ -172,7 +172,7 @@ custom-employee-portal/
     migrations/      6 sequelize migrations
     tests/           auth.test.js, rbac.test.js, setup.js
     postman_collection.json
-    .env.example
+    .env
     package.json
 
   frontend/
@@ -184,7 +184,7 @@ custom-employee-portal/
       context/       AuthContext.jsx, ToastContext.jsx
       services/      api.js (axios + refresh interceptor), endpoints.js
       App.jsx, main.jsx
-    .env.example
+    .env
     package.json
 
   docs/
