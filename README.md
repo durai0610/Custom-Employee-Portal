@@ -160,32 +160,40 @@ custom-employee-portal/
   backend/
     src/
       config/        env.js, database.js, config.js (sequelize-cli), zohoAppMap.js
-      controllers/    authController, appsController, zohoController, admin/*
-      middleware/     auth.js, errorHandler.js, rateLimiter.js, validate.js, zohoAuthorize.js
-      models/         User, Role, Permission, UserRole, RolePermission, AuditLog, index.js
-      routes/         authRoutes, appsRoutes, zohoRoutes, adminRoutes
-      services/       tokenService.js, zohoService.js, auditService.js
-      validators/     authValidators.js, adminValidators.js
-      seeds/          seed.js
+      controllers/   authController, appsController, zohoController, admin/*
+      middleware/    auth.js, errorHandler.js, rateLimiter.js, validate.js, zohoAuthorize.js
+      models/        User, Role, Permission, UserRole, RolePermission, AuditLog, index.js
+      routes/        authRoutes, appsRoutes, zohoRoutes, adminRoutes
+      services/      tokenService.js, zohoService.js, auditService.js
+      validators/    authValidators.js, adminValidators.js
+      seeds/         seed.js
       app.js
       server.js
-    migrations/       6 sequelize migrations
-    tests/            auth.test.js, rbac.test.js, setup.js
+    migrations/      6 sequelize migrations
+    tests/           auth.test.js, rbac.test.js, setup.js
     postman_collection.json
     .env.example
     package.json
 
   frontend/
     src/
-      components/     Navbar, Sidebar, ApplicationCard, Badge, ConfirmDialog, LoadingSpinner, ErrorMessage, EmptyState
-      pages/           Login, Dashboard, Unauthorized, admin/{AdminUsers,AdminRoles,AdminPermissions,AdminAuditLogs}
-      layouts/         AppLayout.jsx
-      routes/          ProtectedRoute.jsx, RoleGuard.jsx
-      context/         AuthContext.jsx, ToastContext.jsx
-      services/        api.js (axios + refresh interceptor), endpoints.js
+      components/    Navbar, Sidebar, ApplicationCard, Badge, ConfirmDialog, LoadingSpinner, ErrorMessage, EmptyState
+      pages/         Login, Dashboard, Unauthorized, admin/{AdminUsers,AdminRoles,AdminPermissions,AdminAuditLogs}
+      layouts/       AppLayout.jsx
+      routes/        ProtectedRoute.jsx, RoleGuard.jsx
+      context/       AuthContext.jsx, ToastContext.jsx
+      services/      api.js (axios + refresh interceptor), endpoints.js
       App.jsx, main.jsx
     .env.example
     package.json
+
+  docs/
+    screenshots/
+      login.png
+      admin-dashboard.png
+      hr-dashboard.png
+      admin-users.png
+      audit-logs.png
 
   README.md
   .gitignore
@@ -438,7 +446,25 @@ Seeded by `npm run seed` (password is whatever you set as `DEMO_PASSWORD` in `ba
 
 ## Screenshots
 
-_Add screenshots of the login page, dashboard, and admin panel here before submitting._
+### Login
+
+![Login](docs/screenshots/login.png)
+
+### Admin Dashboard
+
+![Admin Dashboard](docs/screenshots/admin-dashboard.png)
+
+### HR Dashboard
+
+![HR Dashboard](docs/screenshots/hr-dashboard.png)
+
+### Admin Users
+
+![Admin Users](docs/screenshots/admin-users.png)
+
+### Audit Logs
+
+![Audit Logs](docs/screenshots/audit-logs.png)
 
 ## Future Improvements
 
